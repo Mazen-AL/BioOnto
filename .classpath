@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/stanford-corenlp-3.6.0.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/stanford-corenlp-3.6.0-models.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/MetaMapApi.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/prologbeans.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/jena-arq-2.12.1.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/jena-core-2.12.1.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/jena-iri-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/jena-sdb-1.5.1.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/jena-tdb-1.1.1.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/slf4j-api-1.7.12.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/slf4j-jdk14-1.7.12.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/commons-csv-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/httpclient-4.2.6.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/httpclient-cache-4.2.6.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/httpcore-4.2.5.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/jackson-annotations-2.3.0.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/jackson-core-2.3.3.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/jackson-databind-2.3.3.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/jcl-over-slf4j-1.7.6.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/jsonld-java-0.5.0.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/libthrift-0.9.1.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="E:/AOE/Vendor/edu.mit.jwi_2.4.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

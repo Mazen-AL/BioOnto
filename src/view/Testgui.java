@@ -167,6 +167,7 @@ public class Testgui {
               }
               else
               {
+            	  bioportal.API_KEY = key_API.getText() ; 
             	  // do data extraction
             	  if(domainKeyword.getText().isEmpty())
             	  {
@@ -286,6 +287,7 @@ public class Testgui {
               }
               else
               {
+            	  bioportal.API_KEY = key_API.getText() ;
             	  // do data extraction
             	  if( SGT.isSelectionEmpty())
             	  {
@@ -694,7 +696,7 @@ public class Testgui {
 	 */
 	private void initialize() {
 		frmLifeonto = new JFrame();
-		frmLifeonto.setTitle("LifeOnto");
+		frmLifeonto.setTitle("BioOntology");
 		frmLifeonto.setBounds(100, 100, 670, 469);
 		frmLifeonto.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmLifeonto.getContentPane().setLayout(null);

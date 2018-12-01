@@ -32,44 +32,6 @@ import util.bioportal;
 import util.removestopwords;
 
 public class ontologyMapping {
-
-	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-
-		//getKeywordAnnotation("diabetes") ;
-		getKeywordSynAnnotation("diabetes") ;
-		//getKeywordAnsAnnotation("diabetes") ;
-	}
-	
-/*	public static Map<String, Integer> getmeasureLODconcepts(String Text)
-	{
-		
-		Map<String, Integer> lodconcepts = new HashMap<String, Integer>();
-		Map<String, Integer> mentions = new HashMap<String, Integer>();
-		
-		try 
-		{
-				
-      			mentions = NGramAnalyzer.entities(1,3, Text) ;
-				
-				for(String concept : mentions.keySet())
-				{
-					// no need to examine the stopwords
-					if (!concept.isEmpty()  && !removestopwords.removestopwordsingle(concept.trim()) && EntityMentionDetectionSTLLD(concept) ) 
-						lodconcepts.put(concept, 1) ;
-				}
-
-			                
-			} 
-		catch (Exception e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-		return lodconcepts ;
-	}*/
-	
 	
 	public static Map<String, Integer> getAnnotationBioP(Map<String, Integer> keywords) throws IOException
 	{
@@ -97,20 +59,6 @@ public class ontologyMapping {
 				concepts.put(keyword, 1) ;
 
 			}
-/*			else if (getKeywordSynAnnotation(keyword))
-			{
-				if (ontologyMapping.getSemanticGroupTypeDISO_CHEM(keyword) )
-				{
-					concepts.put(keyword, 1) ;
-				}
-			}
-			else if (getKeywordAnsAnnotation(keyword))
-			{
-				if (ontologyMapping.getSemanticGroupTypeDISO_CHEM(keyword) )
-				{
-					concepts.put(keyword, 1) ;
-				}
-			}*/
 			
 		}
 		return concepts ; 
@@ -132,20 +80,7 @@ public class ontologyMapping {
 					concepts.put(keyword, group) ;
 				}
 			}
-/*			else if (getKeywordSynAnnotation(keyword))
-			{
-				if (ontologyMapping.getSemanticGroupTypeDISO_CHEM(keyword) )
-				{
-					concepts.put(keyword, 1) ;
-				}
-			}
-			else if (getKeywordAnsAnnotation(keyword))
-			{
-				if (ontologyMapping.getSemanticGroupTypeDISO_CHEM(keyword) )
-				{
-					concepts.put(keyword, 1) ;
-				}
-			}*/
+
 			
 		}
 		return concepts ; 

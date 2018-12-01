@@ -10,7 +10,7 @@ import java.util.Map;
 
 import util.ReadXMLFile;
 import util.wordNetHrachy;
-import NER.OpenBioAnnotator;
+//import NER.OpenBioAnnotator;
 
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
@@ -68,7 +68,7 @@ public class hierarchy {
 			 // http://sparql.bioontology.org/
 			 // "http://sparql.bioontology.org/sparql/"
 	         QueryEngineHTTP qexec = QueryExecutionFactory.createServiceRequest("http://sparql.bioontology.org/sparql/", query); 		                      
-	         qexec.addParam("apikey", OpenBioAnnotator.apikey) ;
+	         qexec.addParam("apikey", "") ;
 	         ResultSet results1 ;
 	         qexec.setTimeout(60000);
 	         results1 = qexec.execSelect() ;
@@ -544,54 +544,5 @@ public class hierarchy {
 	        return list;
 	    }
 	 
-	 public static void MeasureWordNet() throws IOException
-		{
-			
-			Map<String, List<String>> diseasegoldstandard = ReadXMLFile.Deserialize("F:\\eclipse64\\eclipse\\DiseaseGoldstandard") ;
-			//Map<String, List<String>> diseasegoldstandard = ReadXMLFile.Deserialize("F:\\eclipse64\\eclipse\\DiseaseCDRGoldstandard") ;
-			
-			
-			double Recall = 0 ; 
-			double Precision  = 0 ;
-			int count = 0 ; 
-		    for (String disease: diseasegoldstandard.keySet())
-	   	 	{
-		    	List<String> gold = diseasegoldstandard.get(disease) ;
-		    	List<String> Hierarchy = wordNetHrachy.getHypernymswithSyn(disease) ; 
-		    	List<String> Hierlist = new ArrayList<String>() ;
-		   		 
-		   		if (!Hierarchy.isEmpty()   )
-		   		{
-		   			for (int i = 0; i <  Hierarchy.size() ; i++)
-		   			{
-		   				String hier = Hierarchy.get(i) ;	         	
-		 	         	Hierlist.add(hier.toLowerCase()) ;
-		   			}
 
-			   		 List<String> ret = intersection(gold, Hierlist) ;
-			   		 count++ ;
-		 	   		 Recall += (double) ret.size()/(double) gold.size() ;
-		 	   		 Precision += (double) ret.size()/(double) Hierlist.size() ;
-		 	   		 
-		 	   		 if (count % 10 == 0 )
-		 	   		 {
-		 	   			Double  tempRecall = Recall / count ;
-		 	   			Double  tempPrecision = Precision /count ;
-		 	   			System.out.println(tempRecall);
-		 	   		    System.out.println(tempPrecision);
-		 	   		    System.out.println(count);
-		 	   		 }
-	 	   		 
-		   		}
-
-	  	 	}
-		    
-		    Recall = Recall / count ;
-		    Precision = Precision /count ; 
-		    double Fmeasure = 2* ((Precision * Recall) / (Precision + Recall)) ;
-		    System.out.println(" Recall = " +  Recall);
-		    System.out.println(" Precision = " +  Precision);
-		    System.out.println(" Fmeasure = " +  Fmeasure);
-			 
-		}
 }

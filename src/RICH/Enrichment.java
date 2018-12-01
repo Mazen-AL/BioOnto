@@ -23,7 +23,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import util.restcalls;
-import NER.OpenBioAnnotator;
+//import NER.OpenBioAnnotator;
 
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
@@ -112,7 +112,7 @@ public class Enrichment {
 		String URL = "http://data.bioontology.org/search?whole_word_only=true&ontologies=MESH&q=" ;
 	 	Map<String, Integer> synConcepts = new HashMap<String, Integer>();
 		String request = URL + URLEncoder.encode(text, "UTF-8") ; ; 
-		String jRespond= restcalls.get(request,OpenBioAnnotator.apikey) ;
+		String jRespond= restcalls.get(request,"") ;
 		System.out.println(jRespond);
 		
 		JSONParser parser = new JSONParser();

@@ -46,6 +46,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -60,7 +61,7 @@ import util.restcalls;
 
 public class bioportal{
 	static final String REST_URL = "http://data.bioontology.org";
-    static final String API_KEY = "cc3d58df-1850-49f0-a0c2-795ad7640622";
+    public static String API_KEY = "" ; //"cc3d58df-1850-49f0-a0c2-795ad7640622";
     static final ObjectMapper OBJ_MAPPER = new ObjectMapper();
     static final ObjectWriter writer = OBJ_MAPPER.writerWithDefaultPrettyPrinter();
 	public static void main(String[] args) throws JsonProcessingException, IOException {
@@ -433,6 +434,7 @@ public static String get(String urlToGet) {
             }
             rd.close();
         } catch (Exception e) {
+        	JOptionPane.showMessageDialog(null, "API_KEY: Bioprortal key is wrong", "Setting" , JOptionPane.OK_CANCEL_OPTION);
             return null;
         }
         return result;

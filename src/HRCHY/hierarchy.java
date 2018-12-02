@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Map;
 
 import util.ReadXMLFile;
-import util.wordNetHrachy;
 //import NER.OpenBioAnnotator;
 
 import com.hp.hpl.jena.query.Query;
